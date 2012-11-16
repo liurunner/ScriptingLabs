@@ -72,3 +72,13 @@ dlldata.c
 
 # mstest test results
 TestResults
+
+/LUA/luabind/luabind-0.9.1/Jamroot
+/LUA/luabind/luabind-0.9.1/bin
+/LUA/luabind/luabind-0.9.1/doc
+/LUA/luabind/luabind-0.9.1/examples
+/LUA/luabind/luabind-0.9.1/src
+/LUA/luabind/luabind-0.9.1/stage
+/LUA/luabind/luabind-0.9.1/test
+/LUA/luabind/luabind-0.9.1/Build.bat~
+/LUA/luabind/luabind-0.9.1/INSTALL

@@ -51,6 +51,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	luaL_dostring(L, "print(\"Hello from Lua!\")");
 	luaL_dofile(L, "Test.lua");
+	luaL_dofile(L, "Test.luac");
 
 	lua_getglobal(L, "s");
 	std::string str = lua_tostring(L, -1);
@@ -67,10 +68,17 @@ int _tmain(int argc, _TCHAR* argv[])
 		std::cout << "X is not a number!" << std::endl;
 	}
 
-
 	luaL_dofile(L, "TestFunc.lua");
-
 	std::cout << health << std::endl;
+
+	luaL_dofile(L, "TestFunc2.lua");
+	lua_getglobal(L, "LuaMethod");
+	if(lua_isfunction(L, lua_gettop(L)))
+	{
+		lua_call(L, 0, 0);
+	}
+
+
 
 	//Close our enviroment
 	lua_close(L);
